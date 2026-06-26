@@ -27,19 +27,21 @@ Building a secure frontend-only app requires modern web standards:
 - **Key Derivation**: We use **Argon2id** (via WebAssembly) to derive a strong master key from your password, making brute-force attacks extremely difficult.
 - **Encryption**: We use the native **WebCrypto API (AES-GCM)** for lightning-fast, military-grade encryption of your data.
 - **Custom Format**: The vault is a proprietary encrypted JSON payload, ensuring maximum flexibility while maintaining a minimal file size for network sync.
+- **Thread & Memory Isolation**: All heavy cryptography and database operations run off the main thread inside a dedicated **Web Worker** via a custom, zero-dependency RPC bridge. This keeps the UI perfectly smooth and isolates sensitive memory.
 
 ## 🛠️ Tech Stack
 
 - **Framework**: React + TypeScript
 - **State Management**: Zustand
 - **Build Tool**: Vite
+- **Architecture**: Web Workers (Custom strictly typed RPC bridge)
 - **Crypto**: WebCrypto API + Argon2 (WASM)
 
 ## 🗺️ Roadmap
 
 Currently, PKey is in the early stages of development. Here is the plan:
 
-- [x] Initial setup (Vite, React, TS).
+- [x] Initial setup (Vite, React, TS) and Web Worker RPC infrastructure.
 - [ ] Implement Argon2 KDF (WASM) & AES-GCM encryption logic.
 - [ ] IndexedDB storage engine & Local-first architecture.
 - [ ] Minimalist UI/UX for mobile & desktop.
