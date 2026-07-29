@@ -1,0 +1,43 @@
+.root {
+    position: sticky;
+    top: 0;
+    display: none;
+    height: 100vh;
+    padding: 24px 24px var(--dock-height);
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+}
+
+.header {
+    padding-bottom: 24px;
+    border-bottom: var(--separator);
+}
+
+.root h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.header p {
+    margin: 12px 0 0;
+}
+
+.section {
+    padding: 16px 0;
+    border-bottom: var(--separator);
+}
+
+.content h3 {
+    margin: 0 0 8px;
+    font-size: 16px;
+}
+
+.content p {
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .root {
+        display: block;
+    }
+}
