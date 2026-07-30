@@ -1,0 +1,16 @@
+.root {
+    --dock-height: 120px;
+    --desktop-content-width: min(80vw, 1536px);
+    --separator: 1px solid #d0d3d8;
+
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+    .root {
+        display: grid;
+        width: var(--desktop-content-width);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin: 0 auto;
+    }
+}

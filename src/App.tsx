@@ -1,11 +1,12 @@
-import { type FC, useEffect, useState } from 'react';
-import { worker } from './worker/worker';
+import { BottomDock } from './components/BottomDock/BottomDock';
+import { DetailPane } from './components/DetailPane/DetailPane';
+import { MainList } from './components/MainList/MainList';
+import styles from './App.module.css';
 
-export const App: FC = () => {
-  const [status, setStatus] = useState<string>('loading');
-  useEffect(() => {
-    worker.db.getState().then(data => setStatus(data.state));
-  }, []);
-
-  return <div>Welcome to pkey.app. Status of database: {status}</div>
-}
+export const App = () => (
+    <div className={styles.root}>
+        <MainList />
+        <DetailPane />
+        <BottomDock />
+    </div>
+);

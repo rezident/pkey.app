@@ -1,0 +1,42 @@
+.root {
+    padding: 0 0 var(--dock-height);
+}
+
+.header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 24px 8px;
+    border-bottom: var(--separator);
+}
+
+.eyebrow {
+    margin: 8px 0 0;
+    font-size: 14px;
+}
+
+.root h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.item {
+    padding: 16px 8px;
+    border-bottom: var(--separator);
+}
+
+@media (width < 768px) {
+    .root {
+        height: 100%;
+        overflow-y: auto;
+        overscroll-behavior-y: contain;
+        -webkit-overflow-scrolling: touch;
+    }
+}
