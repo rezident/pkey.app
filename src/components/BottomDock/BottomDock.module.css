@@ -6,7 +6,7 @@
     left: 0;
     height: var(--dock-height);
     border-top: var(--separator);
-    background: rgba(255, 255, 255, 0.72);
+    background: rgb(255 255 255 / 72%);
     backdrop-filter: blur(12px);
 }
 
@@ -19,7 +19,7 @@
     padding: 0 8px;
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
     .content {
         width: var(--desktop-content-width);
         margin: 0 auto;

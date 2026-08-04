@@ -1,12 +1,15 @@
 import type { Contracts } from './contracts/types';
-
-import type { AsyncGateway, PromiseResolvers, RequestMessage, ResponseMessage } from './types';
 import type { ContractName } from './contracts/types';
+import type { AsyncGateway, PromiseResolvers, RequestMessage, ResponseMessage } from './types';
 
 const workerServer = new Worker(new URL('./worker.server.ts', import.meta.url), { type: 'module' });
 const pendingPromises = new Map<string, PromiseResolvers>();
 
-const createRequestMessage = (contractName: ContractName, method: string, args: unknown[]): RequestMessage => ({
+const createRequestMessage = (
+    contractName: ContractName,
+    method: string,
+    args: unknown[],
+): RequestMessage => ({
     uuid: crypto.randomUUID(),
     contractName,
     method,
@@ -22,13 +25,18 @@ const postMessage = (contractName: ContractName, method: string, args: unknown[]
 };
 
 const createContractProxy = (contractName: ContractName) => {
-    return new Proxy({} as any, {
-        get: (__, method) => (...args: unknown[]) => postMessage(contractName, String(method), args),
+    return new Proxy({} as Record<string, (...args: unknown[]) => Promise<unknown>>, {
+        get:
+            (__, method) =>
+            (...args: unknown[]) =>
+                postMessage(contractName, String(method), args),
     });
 };
 
 const createContractsProxy = <T extends object>(): AsyncGateway<T> => {
-    return new Proxy({} as any, { get: (_, apiName) => createContractProxy(String(apiName) as ContractName) });
+    return new Proxy({} as AsyncGateway<T>, {
+        get: (_, apiName) => createContractProxy(String(apiName) as ContractName),
+    });
 };
 
 workerServer.onmessage = (event: MessageEvent<ResponseMessage>) => {

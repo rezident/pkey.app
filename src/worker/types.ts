@@ -21,8 +21,7 @@ export interface ResponseMessage {
 export type AsyncGateway<T> = {
     [Entity in keyof T]: {
         [Method in keyof T[Entity]]: T[Entity][Method] extends (...args: infer Args) => infer Return
-            ? (...args: Args) => Return extends Promise<any> ? Return : Promise<Return>
+            ? (...args: Args) => Return extends Promise<unknown> ? Return : Promise<Return>
             : never;
-    }
+    };
 };
-

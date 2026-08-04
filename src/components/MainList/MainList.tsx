@@ -13,7 +13,7 @@ export const MainList = () => (
         </header>
 
         <ol className={styles.list}>
-            {secretNames.map(secretName => (
+            {secretNames.map((secretName) => (
                 <li className={styles.item} key={secretName}>
                     {secretName}
                 </li>
