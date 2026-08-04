@@ -23,6 +23,5 @@ export type AsyncGateway<T> = {
         [Method in keyof T[Entity]]: T[Entity][Method] extends (...args: infer Args) => infer Return
             ? (...args: Args) => Return extends Promise<any> ? Return : Promise<Return>
             : never;
-    }
+    };
 };
-

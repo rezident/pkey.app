@@ -24,6 +24,7 @@ PKey is a 100% client-side application. It consists only of static files running
 ## 🛡️ Security Architecture
 
 Building a secure frontend-only app requires modern web standards:
+
 - **Key Derivation**: We use **Argon2id** (via WebAssembly) to derive a strong master key from your password, making brute-force attacks extremely difficult.
 - **Encryption**: We use the native **WebCrypto API (AES-GCM)** for lightning-fast, military-grade encryption of your data.
 - **Custom Format**: The vault is a proprietary encrypted JSON payload, ensuring maximum flexibility while maintaining a minimal file size for network sync.
@@ -54,7 +55,7 @@ Currently, PKey is in the early stages of development. Here is the plan:
 
 PKey is an **Open Source** project. Anyone can clone the repository, run it, or host it on their own domain (since it's just static files).
 
-To support the development, PKey operates on an **Honorware** model. Certain "Pro" features might be locked behind a voluntary sponsorship wall in the official `pkey.app` build. However, as it is open source, anyone is free to fork the repo and enable all features for themselves. Sponsoring is a way to say *Thank You* to the author, not a strict paywall.
+To support the development, PKey operates on an **Honorware** model. Certain "Pro" features might be locked behind a voluntary sponsorship wall in the official `pkey.app` build. However, as it is open source, anyone is free to fork the repo and enable all features for themselves. Sponsoring is a way to say _Thank You_ to the author, not a strict paywall.
 
 ## 🚀 Getting Started (For Developers)
 

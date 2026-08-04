@@ -10,7 +10,7 @@ export const DetailPane = () => (
         </header>
 
         <div className={styles.content}>
-            {sectionNumbers.map(sectionNumber => (
+            {sectionNumbers.map((sectionNumber) => (
                 <section className={styles.section} key={sectionNumber}>
                     <h3>Section {sectionNumber}</h3>
                     <p>Placeholder content for the selected secret.</p>

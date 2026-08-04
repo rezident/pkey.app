@@ -1,3 +1,3 @@
 export const getState = () => {
-    return  { state: 'NOT_INITIALIZED' };
-}
+    return { state: 'NOT_INITIALIZED' };
+};
