@@ -25,7 +25,7 @@ const postMessage = (contractName: ContractName, method: string, args: unknown[]
 };
 
 const createContractProxy = (contractName: ContractName) => {
-    return new Proxy({} as any, {
+    return new Proxy({} as Record<string, (...args: unknown[]) => Promise<unknown>>, {
         get:
             (__, method) =>
             (...args: unknown[]) =>
@@ -34,7 +34,7 @@ const createContractProxy = (contractName: ContractName) => {
 };
 
 const createContractsProxy = <T extends object>(): AsyncGateway<T> => {
-    return new Proxy({} as any, {
+    return new Proxy({} as AsyncGateway<T>, {
         get: (_, apiName) => createContractProxy(String(apiName) as ContractName),
     });
 };

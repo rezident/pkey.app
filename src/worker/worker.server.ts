@@ -17,7 +17,8 @@ self.onmessage = async (event: MessageEvent<RequestMessage>) => {
     const contract: Contract = contracts[contractName];
 
     try {
-        self.postMessage(createResponseMessage(uuid, 'resolve', await contract[method](...args)));
+        const handler = contract[method] as (...args: unknown[]) => unknown;
+        self.postMessage(createResponseMessage(uuid, 'resolve', await handler(...args)));
     } catch (e) {
         self.postMessage(createResponseMessage(uuid, 'reject', String(e)));
     }
