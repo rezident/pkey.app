@@ -17,7 +17,7 @@
         "src/**/*.css": [
             "stylelint"
         ],
-        "**/*.{js,jsx,ts,tsx,css,md,html,json}": [
+        "**/*.{js,jsx,ts,tsx,css,md,html,json,yml}": [
             "prettier --check"
         ]
     },
