@@ -17,5 +17,9 @@ export default defineConfig(({ command }) => {
                     : '[folder]__[local]_[hash:base64:5]',
             },
         },
+        test: {
+            environment: 'node',
+            include: ['src/**/*.test.{ts,tsx}'],
+        },
     };
 });

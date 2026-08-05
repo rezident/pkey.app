@@ -8,6 +8,8 @@
         "preview": "vite preview",
         "typecheck": "tsc -b",
         "lint": "eslint . && stylelint \"src/**/*.css\" && prettier --check .",
+        "test": "vitest",
+        "test:run": "vitest run",
         "prepare": "husky"
     },
     "lint-staged": {
@@ -45,6 +47,7 @@
         "stylelint-config-standard": "^40.0.0",
         "typescript": "^6.0.3",
         "typescript-eslint": "^8.61.1",
-        "vite": "^8.0.16"
+        "vite": "^8.0.16",
+        "vitest": "^4.1.10"
     }
 }
