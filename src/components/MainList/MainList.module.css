@@ -4,9 +4,9 @@
 
 .header {
     display: flex;
+    gap: 16px;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 16px;
     padding: 24px 8px;
     border-bottom: var(--separator);
 }
@@ -22,8 +22,8 @@
 }
 
 .list {
-    margin: 0;
     padding: 0;
+    margin: 0;
     list-style: none;
 }
 
