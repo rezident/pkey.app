@@ -1,5 +1,5 @@
 import { getState } from './getState';
 
-export const db = {
+export const database = {
     getState,
 };
