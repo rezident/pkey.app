@@ -1,5 +1,5 @@
-import { getState } from './getState';
+import { getStatus } from './getStatus';
 
 export const database = {
-    getState,
+    getStatus,
 };

@@ -1,5 +1,9 @@
 import { create } from 'zustand';
 
-type StoreState = object;
+import { createDatabaseSlice, type DatabaseSlice } from '~/store/slices/database';
 
-export const useStore = () => create<StoreState>()(() => ({}));
+type StoreState = DatabaseSlice;
+
+export const useStore = create<StoreState>()((...args) => ({
+    ...createDatabaseSlice(...args),
+}));

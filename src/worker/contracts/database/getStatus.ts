@@ -1,5 +1,5 @@
 type Result = 'NOT_CREATED';
 
-export const getState = (): Result => {
+export const getStatus = (): Result => {
     return 'NOT_CREATED';
 };
