@@ -1,4 +1,5 @@
-import { db } from './db';
+import { database } from '~/worker/contracts/database';
+
 import type { Contract } from './types';
 
-export const contracts = { db } satisfies Record<string, Contract>;
+export const contracts = { database } satisfies Record<string, Contract>;
