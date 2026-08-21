@@ -26,3 +26,7 @@ export const createDatabaseSlice: StateCreator<DatabaseSlice> = (set) => ({
         },
     },
 });
+
+export const getFetchStatus = ({ database }: DatabaseSlice) => database.fetchStatus;
+export const getStatus = ({ database }: DatabaseSlice) => database.status;
+export const getOperation = ({ database }: DatabaseSlice) => database.operation;
