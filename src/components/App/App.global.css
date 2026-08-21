@@ -9,6 +9,8 @@ body {
     margin: 0;
     overflow: hidden;
     font-family: system-ui;
+    color: var(--primary-color);
+    background-color: var(--background-color);
 }
 
 @media (width < 768px) {

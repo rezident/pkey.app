@@ -5,7 +5,7 @@
     left: 0;
     z-index: 10;
     height: var(--dock-height);
-    background: rgb(255 255 255 / 72%);
+    background: color-mix(in srgb, var(--background-color) 72%, transparent);
     border-top: var(--separator);
     backdrop-filter: blur(12px);
 }
