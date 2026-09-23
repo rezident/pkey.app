@@ -1,13 +1,13 @@
 import { useEffect } from 'react';
 
-import { BottomDock } from '~/components/BottomDock/BottomDock';
-import { DetailPane } from '~/components/DetailPane/DetailPane';
 import { Loader } from '~/components/Loader/Loader';
-import { MainList } from '~/components/MainList/MainList';
+import { VaultScreen } from '~/components/VaultScreen/VaultScreen';
+import { WelcomeScreen } from '~/components/WelcomeScreen/WelcomeScreen';
 import { getFetchStatus, getOperation, getStatus } from '~/store/slices/database';
 import { useStore } from '~/store/useStore';
 
-import styles from './App.module.css';
+import './App.colors.css';
+import './App.global.css';
 
 export const App = () => {
     const fetchStatus = useStore(getFetchStatus);
@@ -20,12 +20,8 @@ export const App = () => {
     }, [fetchStatus]);
 
     return (
-        <div className={styles.root}>
-            <Loader isLoading={!status || operation === 'CHECKING'}>
-                <MainList />
-                <DetailPane />
-                <BottomDock />
-            </Loader>
-        </div>
+        <Loader isLoading={!status || operation === 'CHECKING'}>
+            {status === 'NOT_CREATED' ? <WelcomeScreen /> : <VaultScreen />}
+        </Loader>
     );
 };

@@ -1,0 +1,11 @@
+.root {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 38px;
+}
+
+html[data-layout='compact'] .root {
+    font-size: 28px;
+    line-height: 34px;
+}

@@ -2,7 +2,7 @@
     position: sticky;
     top: 0;
     display: none;
-    height: 100vh;
+    height: 100dvh;
     padding: 24px 24px var(--dock-height);
     overflow-y: auto;
     overscroll-behavior-y: contain;
@@ -36,8 +36,6 @@
     margin: 0;
 }
 
-@media (width >= 768px) {
-    .root {
-        display: block;
-    }
+html[data-layout='split'] .root {
+    display: block;
 }
