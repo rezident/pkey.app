@@ -37,6 +37,7 @@ Building a secure frontend-only app requires modern web standards:
 - **Build Tool**: Vite
 - **Architecture**: Web Workers (Custom strictly typed RPC bridge)
 - **Crypto**: WebCrypto API + Argon2 (WASM)
+- **Icons**: [Lucide](https://lucide.dev/icons/)
 
 ## 🗺️ Roadmap
 

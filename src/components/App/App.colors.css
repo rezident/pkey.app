@@ -1,13 +1,15 @@
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background-color: #000;
-        --primary-color: #fff;
-    }
+:root[data-theme='light'] {
+    --background-color: #fff;
+    --primary-color: #000;
+    --secondary-color: #5e6673;
+    --action-color: #315acf;
+    --brand-color: #315acf;
 }
 
-@media (prefers-color-scheme: light) {
-    :root {
-        --background-color: #fff;
-        --primary-color: #000;
-    }
+:root[data-theme='dark'] {
+    --background-color: #000;
+    --primary-color: #fff;
+    --secondary-color: #a6afbd;
+    --action-color: #3070e5;
+    --brand-color: #3478f6;
 }

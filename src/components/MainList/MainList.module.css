@@ -31,12 +31,3 @@
     padding: 16px 8px;
     border-bottom: var(--separator);
 }
-
-@media (width < 768px) {
-    .root {
-        height: 100%;
-        overflow-y: auto;
-        overscroll-behavior-y: contain;
-        -webkit-overflow-scrolling: touch;
-    }
-}

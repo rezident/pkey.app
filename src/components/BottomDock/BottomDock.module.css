@@ -19,9 +19,7 @@
     padding: 0 8px;
 }
 
-@media (width >= 768px) {
-    .content {
-        width: var(--desktop-content-width);
-        margin: 0 auto;
-    }
+html[data-layout='split'] .content {
+    width: var(--split-content-width);
+    margin: 0 auto;
 }
