@@ -1,9 +1,9 @@
-# PKey.App 🗝️
+# PKey 🗝️
 
 [![Website](https://img.shields.io/badge/website-pkey.app-blue)](https://pkey.app)
 ![Status](https://img.shields.io/badge/%D1%81%D1%82%D0%B0%D1%82%D1%83%D1%81-%D0%B2%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B5-yellow)
 
-[pkey.app](https://pkey.app) — это автономный менеджер паролей в формате PWA. Работает без серверов, следует принципу нулевого разглашения (zero-knowledge) и отдает приоритет локальному хранению (local-first).
+[PKey](https://pkey.app) — это автономный менеджер паролей в формате PWA. Работает без серверов, следует принципу нулевого разглашения (zero-knowledge) и отдает приоритет локальному хранению (local-first).
 
 ## 💡 Философия: никаких бэкендов и слежки
 

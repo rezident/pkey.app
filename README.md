@@ -1,9 +1,9 @@
-# PKey.App 🗝️
+# PKey 🗝️
 
 [![Website](https://img.shields.io/badge/website-pkey.app-blue)](https://pkey.app)
 ![Status](https://img.shields.io/badge/status-in%20development-yellow)
 
-[pkey.app](https://pkey.app) is a completely serverless, zero-knowledge, local-first password manager built as a Progressive Web App (PWA).
+[PKey](https://pkey.app) is a completely serverless, zero-knowledge, local-first password manager built as a Progressive Web App (PWA).
 
 ## 💡 The Philosophy: No Backend, No Tracking
 
