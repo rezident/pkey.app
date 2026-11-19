@@ -1,0 +1,54 @@
+.root {
+    position: relative;
+    width: 100%;
+}
+
+.control {
+    width: 100%;
+    height: 56px;
+    padding: 24px 14px 8px;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    border: 1px solid color-mix(in srgb, var(--secondary-color) 40%, transparent);
+    border-radius: 12px;
+}
+
+.control:focus {
+    border-color: var(--action-color);
+}
+
+.label {
+    position: absolute;
+    top: 0;
+    left: 14px;
+    line-height: 20px;
+    color: var(--secondary-color);
+    transform: translateY(18px);
+    transform-origin: top left;
+    transition:
+        transform 160ms ease,
+        color 160ms ease;
+}
+
+.control:focus + .label,
+.control:not(:placeholder-shown) + .label {
+    transform: translateY(6px) scale(0.75);
+}
+
+.control:focus + .label {
+    color: var(--action-color);
+}
+
+.control:focus-visible {
+    outline: 2px solid var(--action-color);
+    outline-offset: -2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .label {
+        transition: none;
+    }
+}
