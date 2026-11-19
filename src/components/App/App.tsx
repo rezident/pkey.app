@@ -1,8 +1,7 @@
 import { useEffect } from 'react';
 
 import { Loader } from '~/components/Loader/Loader';
-import { VaultScreen } from '~/components/VaultScreen/VaultScreen';
-import { WelcomeScreen } from '~/components/WelcomeScreen/WelcomeScreen';
+import { ScreensRouter } from '~/components/ScreensRouter/ScreensRouter.tsx';
 import { getFetchStatus, getOperation, getStatus } from '~/store/slices/database';
 import { useStore } from '~/store/useStore';
 
@@ -13,7 +12,6 @@ export const App = () => {
     const fetchStatus = useStore(getFetchStatus);
     const status = useStore(getStatus);
     const operation = useStore(getOperation);
-    console.log(status);
 
     useEffect(() => {
         fetchStatus();
@@ -21,7 +19,7 @@ export const App = () => {
 
     return (
         <Loader isLoading={!status || operation === 'CHECKING'}>
-            {status === 'NOT_CREATED' ? <WelcomeScreen /> : <VaultScreen />}
+            <ScreensRouter />
         </Loader>
     );
 };
