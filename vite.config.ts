@@ -12,6 +12,7 @@ export default defineConfig(({ command }) => {
         },
         css: {
             modules: {
+                localsConvention: 'camelCaseOnly',
                 generateScopedName: isProd
                     ? '[folder]_[hash:base64:5]'
                     : '[folder]__[local]_[hash:base64:5]',

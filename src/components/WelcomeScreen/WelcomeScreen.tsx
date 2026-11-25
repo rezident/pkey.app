@@ -1,7 +1,7 @@
 import { EyeOff, Shield, UserMinus } from 'lucide-react';
 import type { FC } from 'react';
 
-import { Button } from '~/components/Button/Button';
+import { Button } from '~/components/controls/Button/Button';
 import { OnboardingLayout } from '~/components/OnboardingLayout/OnboardingLayout.tsx';
 import { Paragraph } from '~/components/Paragraph/Paragraph';
 import { getNavigate } from '~/store/slices/navigation.ts';
