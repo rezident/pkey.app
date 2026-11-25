@@ -4,11 +4,17 @@
     box-sizing: border-box;
 }
 
+:root {
+    --monospace-font-family:
+        'JetBrains Mono', 'Ubuntu Sans Mono', menlo, consolas, 'Liberation Mono', monospace;
+    --ui-font-family: system-ui;
+}
+
 body {
     min-width: 320px;
     min-height: 100dvh;
     margin: 0;
-    font-family: system-ui;
+    font-family: var(--ui-font-family);
     color: var(--primary-color);
     background-color: var(--background-color);
 }

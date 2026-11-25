@@ -1,7 +1,7 @@
 import { type FC, useState } from 'react';
 
-import { Button } from '~/components/Button/Button.tsx';
-import { Input } from '~/components/Input/Input.tsx';
+import { Button } from '~/components/controls/Button/Button.tsx';
+import { SecretInput } from '~/components/controls/SecretInput/SecretInput.tsx';
 import { OnboardingLayout } from '~/components/OnboardingLayout/OnboardingLayout.tsx';
 import { Paragraph } from '~/components/Paragraph/Paragraph.tsx';
 import { getNavigate } from '~/store/slices/navigation.ts';
@@ -21,16 +21,14 @@ export const CreateVaultScreen: FC = () => {
                 Choose a&nbsp;master password to&nbsp;encrypt your vault on&nbsp;this device.
             </Paragraph>
             <div className={styles.fields}>
-                <Input
+                <SecretInput
                     label="Master password"
-                    type="password"
                     autoComplete="new-password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 />
-                <Input
+                <SecretInput
                     label="Confirm master password"
-                    type="password"
                     autoComplete="new-password"
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}
